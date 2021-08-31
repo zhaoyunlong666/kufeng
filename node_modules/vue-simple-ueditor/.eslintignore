@@ -1,0 +1,11 @@
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+/src/ueditor/*.js
+/src/ueditor/lang/*/*.js
+/src/ueditor/dialogs/*.js
+/src/ueditor/dialogs/*/*.js
+/src/ueditor/third-party/*/*.js
+/src/ueditor/third-party/*.js

@@ -1,0 +1,48 @@
+# Dockerfile
+
+#rm -rf /var/lib/docker/aufs   docker 缓存
+##构建命令
+#docker build -t myapp .
+#docker images
+
+
+#1阶段
+
+FROM artyomturkin/vuepress
+COPY . /bdc
+RUN cd /bdc && yarn install
+WORKDIR /bdc
+RUN yarn dev
+#CMD ['yarn', 'dev']
+
+
+#2阶段
+# FROM node:alpine
+
+# COPY . /bdc
+# RUN cd /bdc && npm -g install yarn
+# RUN cd /bdc && yarn install
+# RUN cd /bdc/client && yarn install
+# WORKDIR /bdc
+# RUN cd /bdc
+# RUN yarn dev
+#CMD ['yarn','dev']
+
+#3
+# FROM alpine AS builder
+# WORKDIR /bdc
+# RUN apk add --no-cache --update nodejs nodejs-npm
+# COPY package.json package-lock.json ./
+# COPY client/package.json package-lock.json ./client/
+# RUN cd /bdc && yarn  --production
+# RUN cd /bdc/client && yarn  --production
+
+# FROM alpine
+# WORKDIR /bdc
+# RUN apk add --no-cache --update nodejs nodejs-npm
+# COPY --from=builder /usr/src/app/node_modules ./node_modules
+# # COPY --from=builder /usr/src/app/node_modules ./node_modules
+# COPY . .
+# CMD ['yarn', 'dev']
+
+

@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "1qaz@wsx",
+    "database": "kf",
+    "host": "47.95.200.152",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "1qaz@wsx",
+    "database": "kf",
+    "host": "47.95.200.152",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "1qaz@wsx",
+    "database": "kf",
+    "host": "47.95.200.152",
+    "dialect": "mysql"
+  }
+}
